@@ -1,6 +1,14 @@
 #include <iostream>
 
 int main(){
-std::cout << ("Hello World") << std::endl;
+int n;
+std::cout << ("Odd and even calculator\n ") << std::endl;
+std::cout << ("Please write your number: ") << std::endl;
+std::cin >> n;
+if(n % 2 == 0){
+    std::cout << ("Even") << std::endl;
+}else{
+    std::cout << ("Odd") << std::endl;
+}
 return 0;
 }
