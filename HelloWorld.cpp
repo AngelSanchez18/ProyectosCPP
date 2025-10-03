@@ -1,14 +1,34 @@
 #include <iostream>
+#include <string>
+#define GROUP_1_THRESHOLD 12
+#define GROUP_2_THRESHOLD 28
+#define GROUP_1_NAME "Grupo A"
+#define GROUP_2_NAME "Grupo B"
+#define GROUP_3_NAME "Grupo C"
 
-int main(){
-int n;
-std::cout << ("Odd and even calculator\n ") << std::endl;
-std::cout << ("Please write your number: ") << std::endl;
-std::cin >> n;
-if(n % 2 == 0){
-    std::cout << ("Even") << std::endl;
-}else{
-    std::cout << ("Odd") << std::endl;
+std::string GetGroup(int age);
+
+int main() {
+    std::string name = "";
+    int age = 0;
+    std::string group;
+    std::cout << "Enter your name: ";
+    getline(std::cin, name);
+    std::cout << "And please enter your age: ";
+    std::cin >> age;
+    group = GetGroup(age);
+    std::cout << "Welcome " << name << ". You are in " << group << ".\n";
+
+
 }
-return 0;
+std::string GetGroup(int age) {
+    if (age <= GROUP_1_THRESHOLD) {
+        return GROUP_1_NAME;
+    }
+    else if (age <= GROUP_2_THRESHOLD) {
+        return GROUP_2_NAME;
+    }
+    else {
+        return GROUP_3_NAME;
+    }
 }
