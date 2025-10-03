@@ -1,34 +1,13 @@
 #include <iostream>
-#include <string>
-#define GROUP_1_THRESHOLD 12
-#define GROUP_2_THRESHOLD 28
-#define GROUP_1_NAME "Grupo A"
-#define GROUP_2_NAME "Grupo B"
-#define GROUP_3_NAME "Grupo C"
-
-std::string GetGroup(int age);
-
+using namespace std;
 int main() {
-    std::string name = "";
-    int age = 0;
-    std::string group;
-    std::cout << "Enter your name: ";
-    getline(std::cin, name);
-    std::cout << "And please enter your age: ";
-    std::cin >> age;
-    group = GetGroup(age);
-    std::cout << "Welcome " << name << ". You are in " << group << ".\n";
-
-
+    int number1 = 0, number2 = 0;
+    char simbol;
+    float result;
+    cout << "Escribe tus numeros enteros: ";
+    cin >> number1 >> number2;
+    cout << "Ahora escribe tu signo de operacion (+, -, *, /): ";
+    cin >> simbol;
+    cout << "numero 1: " << number1 << "\tnumero 2: " << number2 << "\tsigno: " << simbol;
 }
-std::string GetGroup(int age) {
-    if (age <= GROUP_1_THRESHOLD) {
-        return GROUP_1_NAME;
-    }
-    else if (age <= GROUP_2_THRESHOLD) {
-        return GROUP_2_NAME;
-    }
-    else {
-        return GROUP_3_NAME;
-    }
-}
+    
